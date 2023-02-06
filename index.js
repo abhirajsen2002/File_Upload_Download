@@ -24,7 +24,7 @@ app.get("/",(req,res)=>{
     res.sendFile(__dirname+"/public/test.html")
 })
 app.post("/upload", upload.single("file"), (req, res) => {
-  res.send("File uploaded successfully" + file.originalname);
+  res.send("File uploaded successfully");
   //res.send(file.originalname);
 });
 
