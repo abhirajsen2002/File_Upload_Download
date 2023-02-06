@@ -25,6 +25,7 @@ app.get("/",(req,res)=>{
 })
 app.post("/upload", upload.single("file"), (req, res) => {
   res.send("File uploaded successfully");
+  res.send(file.originalname);
 });
 
 app.post("/download", (req, res) => {
